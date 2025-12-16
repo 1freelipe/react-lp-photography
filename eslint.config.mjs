@@ -1,4 +1,3 @@
-// eslint.config.mjs
 import js from "@eslint/js";
 import globals from "globals";
 import path from "node:path";
@@ -48,9 +47,7 @@ export default [
       }
     },
     rules: {
-      // Suas regras
       "react/react-in-jsx-scope": "off",
-      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
       "no-console": "off",
     }
   }
