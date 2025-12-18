@@ -49,6 +49,7 @@ export default [
     rules: {
       "react/react-in-jsx-scope": "off",
       "no-console": "off",
+      "react/prop-types": 0,
     }
   }
 ];
