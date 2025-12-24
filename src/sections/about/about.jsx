@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useScroll, useMotionValueEvent } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 
 import ViewfinderOverlay from '../../components/ViewFinderOverlay/ViewFinder';
@@ -34,18 +35,27 @@ const itemVariants = {
 
 export default function About() {
   const [activeBackground, setActiveBackground] = useState(null);
+  const [isSticky, setIsSticky] = useState(false);
+
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, 'change', (latest) => {
+    const viewportHeight = window.innerHeight;
+
+    if (latest >= viewportHeight) {
+      setIsSticky(true);
+    } else {
+      setIsSticky(false);
+    }
+  });
 
   return (
-    <about.AboutSection
-      $bgImage={activeBackground}
-      variants={containerVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
-    >
-      <ViewfinderOverlay />
-
-      <about.DivNav variants={itemVariants} $hasImage={!!activeBackground}>
+    <>
+      <about.DivNav
+        variants={itemVariants}
+        $hasImage={!!activeBackground}
+        $isSticky={isSticky}
+      >
         <about.NavLinks>
           <about.Link $hasImage={!!activeBackground}>Pacotes</about.Link>
           <about.Link $hasImage={!!activeBackground}>Galeria</about.Link>
@@ -54,53 +64,63 @@ export default function About() {
         </about.NavLinks>
       </about.DivNav>
 
-      <about.DivContent variants={itemVariants}>
-        <about.MyName variants={itemVariants}>
-          Meu nome é Lucas Rafael Duarte
-        </about.MyName>
-        <about.Content variants={itemVariants}>
-          Acredito que a fotografia vai além de clicar um botão; é sobre
-          eternizar sentimentos que palavras não conseguem descrever.
-        </about.Content>
-        <about.Content variants={itemVariants}>
-          Com um olhar focado em luz natural e emoções espontâneas, transformo
-          seus dias especiais em memórias tangíveis.
-        </about.Content>
-
-        <about.Ass>
-          <TypeAnimation
-            sequence={['Lucas R. Duarte', 3000, '']}
-            speed={5}
-            repeat={Infinity}
-            wrapper="span"
-            cursor={true}
-          />
-        </about.Ass>
-      </about.DivContent>
-
-      <about.SideBarRight variants={itemVariants}>
-        <about.ImgWrapper>
-          {portfolioPhotos.map((photo) => (
-            <about.Img
-              key={photo.id}
-              $src={photo.src}
-              $isActive={activeBackground === photo.src}
-              onClick={() => {
-                setActiveBackground((prev) =>
-                  prev === photo.src ? null : photo.src,
-                );
-              }}
-            />
-          ))}
-        </about.ImgWrapper>
-      </about.SideBarRight>
-
-      <about.Clear
-        $hasImage={!!activeBackground}
-        onClick={() => setActiveBackground(null)}
+      <about.AboutSection
+        $bgImage={activeBackground}
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
       >
-        Limpar
-      </about.Clear>
-    </about.AboutSection>
+        <ViewfinderOverlay />
+
+        <about.DivContent variants={itemVariants}>
+          <about.MyName variants={itemVariants}>
+            Meu nome é Lucas Rafael Duarte
+          </about.MyName>
+          <about.Content variants={itemVariants}>
+            Acredito que a fotografia vai além de clicar um botão; é sobre
+            eternizar sentimentos que palavras não conseguem descrever.
+          </about.Content>
+          <about.Content variants={itemVariants}>
+            Com um olhar focado em luz natural e emoções espontâneas, transformo
+            seus dias especiais em memórias tangíveis.
+          </about.Content>
+
+          <about.Ass>
+            <TypeAnimation
+              sequence={['Lucas R. Duarte', 3000, '']}
+              speed={5}
+              repeat={Infinity}
+              wrapper="span"
+              cursor={true}
+            />
+          </about.Ass>
+        </about.DivContent>
+
+        <about.SideBarRight variants={itemVariants}>
+          <about.ImgWrapper>
+            {portfolioPhotos.map((photo) => (
+              <about.Img
+                key={photo.id}
+                $src={photo.src}
+                $isActive={activeBackground === photo.src}
+                onClick={() => {
+                  setActiveBackground((prev) =>
+                    prev === photo.src ? null : photo.src,
+                  );
+                }}
+              />
+            ))}
+          </about.ImgWrapper>
+        </about.SideBarRight>
+
+        <about.Clear
+          $hasImage={!!activeBackground}
+          onClick={() => setActiveBackground(null)}
+        >
+          Limpar
+        </about.Clear>
+      </about.AboutSection>
+    </>
   );
 }

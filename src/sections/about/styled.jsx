@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export const AboutSection = styled(motion.section)`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background: ${(props) =>
     props.$bgImage
       ? `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${props.$bgImage})`
@@ -13,7 +13,7 @@ export const AboutSection = styled(motion.section)`
   background-position: center;
   transition: background 0.5s ease-in-out;
   color: ${(props) => (props.$bgImage ? '#fffff0' : '#252525')};
-  overflow: hidden;
+  overflow: visible;
 `;
 
 export const DivNav = styled(motion.nav)`
@@ -21,7 +21,7 @@ export const DivNav = styled(motion.nav)`
   align-items: center;
   justify-content: center;
   width: 30%;
-  margin: 15px auto;
+  min-width: 400px;
   border: 1px solid
     ${(props) => (props.$hasImage ? 'rgba(255, 255, 255, 0.2)' : '#c3c6d1')};
   border-radius: 17px;
@@ -31,7 +31,12 @@ export const DivNav = styled(motion.nav)`
       : '4px 6px 6px #c3c6d1'};
   padding: 20px;
   backdrop-filter: ${(props) => (props.$hasImage ? 'blur(50px)' : 'none')};
-  transition: all 0.5s ease;
+  position: ${(props) => (props.$isSticky ? 'fixed' : 'absolute')};
+  left: 50%;
+  top: ${(props) => (props.$isSticky ? '20px' : 'calc(100vh + 20px)')};
+  transform: translateX(-50%);
+  z-index: 9999;
+  background: #fffff0;
 `;
 
 export const NavLinks = styled.ul`
@@ -77,8 +82,8 @@ export const DivContent = styled(motion.div)`
   justify-content: center;
   flex-direction: column;
   width: 1200px;
-  height: 700px;
-  margin: 50px auto;
+  height: 930px;
+  margin: 0 auto;
   border-radius: 12px;
   line-height: 2;
   text-align: center;

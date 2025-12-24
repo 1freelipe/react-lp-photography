@@ -4,6 +4,7 @@ import GlobalStyles from './styles/GlobalStyles';
 import Header from './sections/header/header';
 import About from './sections/about/about';
 import Pricing from './sections/pricing/Pricing';
+import Gallery from './sections/gallery/gallery';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <About />
       <Pricing />
+      <Gallery />
     </>
   );
 }

@@ -16,7 +16,7 @@ export const Title = styled(motion.h2)`
   font-style: italic;
   font-size: 50px;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 100px;
   text-transform: uppercase;
 `;
 
@@ -32,9 +32,7 @@ export const PricingDiv = styled(motion.section)`
   align-items: center;
   justify-content: center;
   width: 1700px;
-  height: 700px;
   gap: 20px;
-  margin: 80px auto;
   position: relative;
 `;
 
@@ -52,6 +50,7 @@ export const DivArrow = styled.div`
     top: 50%;
     right: 170px;
     font-size: 50px;
+    z-index: 100;
   }
 
   .Arrow1 {
@@ -60,12 +59,13 @@ export const DivArrow = styled.div`
     top: 50%;
     left: 170px;
     font-size: 50px;
+    z-index: 100;
   }
 `;
 
 export const CardPricing = styled(motion.div)`
   width: 450px;
-  height: 100%;
+  height: 690px;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 12px;
   border: 1px solid #c3c6d1;
@@ -141,4 +141,47 @@ export const Package = styled.h2`
   border: 1px solid #c3c6d1;
   text-align: center;
   margin-top: 50px;
+`;
+
+export const DivItems = styled.div`
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 80px auto;
+`;
+
+export const ContentList = styled.ul`
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  color: ${(props) => (props.$isPremium ? '#fffff0' : '#252525')};
+  gap: 15px;
+`;
+
+export const ListItems = styled.li`
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 16px;
+`;
+
+export const CTA = styled(motion.button)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  padding: 10px;
+  border: none;
+  border: 1px solid #fffff0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 15 px;
+  font-style: italic;
+  background: ${(props) => (props.$isPremium ? '#EB9D52' : '#252525')};
+  color: #fffff0;
+  margin: 0 auto;
+  border-radius: 12px;
+  cursor: pointer;
 `;

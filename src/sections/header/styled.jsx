@@ -7,7 +7,6 @@ export const DivNavLinks = styled.nav`
   justify-content: center;
   width: 650px;
   padding: 15px 20px;
-  margin: 10px auto;
   border: 1px solid #fffff0;
   border-radius: 45px;
   background: #252525;
@@ -18,8 +17,8 @@ export const DivNav = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 90%;
-  margin: 0 auto;
+  width: 95%;
+  margin: 10px auto;
 `;
 
 export const Logo = styled.h2`
