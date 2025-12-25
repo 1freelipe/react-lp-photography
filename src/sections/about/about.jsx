@@ -85,8 +85,18 @@ export default function About({ id }) {
           >
             Galeria
           </about.Link>
-          <about.Link $hasImage={!!activeBackground}>Contato</about.Link>
-          <about.Link $hasImage={!!activeBackground}>Testemunhos</about.Link>
+          <about.Link
+            $hasImage={!!activeBackground}
+            onClick={() => handleScrollTo('testmonials')}
+          >
+            Testemunhos
+          </about.Link>
+          <about.Link
+            $hasImage={!!activeBackground}
+            onClick={() => handleScrollTo('contact')}
+          >
+            Contato
+          </about.Link>
         </about.NavLinks>
       </about.DivNav>
 

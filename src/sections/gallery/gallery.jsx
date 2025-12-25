@@ -147,7 +147,7 @@ export default function Gallery({ id }) {
         </AnimatePresence>
       </gallery.MainGallery>
 
-      <gallery.Footer>
+      <gallery.Footer variants={itemVariants}>
         <TypeAnimation
           sequence={[
             '©Todos os Direitos Reservados - Lucas Duarte Fotografias',
