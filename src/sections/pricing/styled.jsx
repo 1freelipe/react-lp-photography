@@ -25,6 +25,7 @@ export const Information = styled(motion.p)`
   font-weight: 200;
   font-style: italic;
   color: #fffff0;
+  margin-bottom: 30px;
 `;
 
 export const PricingDiv = styled(motion.section)`

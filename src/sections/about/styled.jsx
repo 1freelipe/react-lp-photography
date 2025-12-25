@@ -6,7 +6,7 @@ export const AboutSection = styled(motion.section)`
   min-height: 100vh;
   background: ${(props) =>
     props.$bgImage
-      ? `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${props.$bgImage})`
+      ? `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${props.$bgImage})`
       : '#fffff0'};
   position: relative;
   background-size: cover;
@@ -25,17 +25,14 @@ export const DivNav = styled(motion.nav)`
   border: 1px solid
     ${(props) => (props.$hasImage ? 'rgba(255, 255, 255, 0.2)' : '#c3c6d1')};
   border-radius: 17px;
-  box-shadow: ${(props) =>
-    props.$hasImage
-      ? '0 8px 32px 0 rgba(0, 0, 0, 0.5)'
-      : '4px 6px 6px #c3c6d1'};
+  box-shadow: ${(props) => (props.$isSticky ? '0' : '4px 6px 6px #c3c6d1')};
   padding: 20px;
   backdrop-filter: ${(props) => (props.$hasImage ? 'blur(50px)' : 'none')};
   position: ${(props) => (props.$isSticky ? 'fixed' : 'absolute')};
   left: 50%;
   top: ${(props) => (props.$isSticky ? '20px' : 'calc(100vh + 20px)')};
   transform: translateX(-50%);
-  z-index: 9999;
+  z-index: 1000;
   background: #fffff0;
 `;
 
@@ -107,8 +104,8 @@ export const Content = styled(motion.p)`
 
 export const Ass = styled.div`
   position: absolute;
-  bottom: 130px;
-  right: 130px;
+  bottom: 220px;
+  right: 150px;
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-style: italic;

@@ -135,7 +135,7 @@ const itemVariants = {
   },
 };
 
-export default function Pricing() {
+export default function Pricing({ id }) {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const itemsPerPage = 3;
@@ -170,7 +170,9 @@ export default function Pricing() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       >
-        <pricing.Title variants={itemVariants}>Pacotes</pricing.Title>
+        <pricing.Title variants={itemVariants} id={id}>
+          Pacotes
+        </pricing.Title>
         <pricing.Information variants={itemVariants}>
           Confira abaixo, todos os pacotes oferecidos.
         </pricing.Information>

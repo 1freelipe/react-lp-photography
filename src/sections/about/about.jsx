@@ -33,9 +33,24 @@ const itemVariants = {
   },
 };
 
-export default function About() {
+export default function About({ id }) {
   const [activeBackground, setActiveBackground] = useState(null);
   const [isSticky, setIsSticky] = useState(false);
+
+  const handleScrollTo = (id) => {
+    const element = document.getElementById(id);
+
+    if (element) {
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
+  };
 
   const { scrollY } = useScroll();
 
@@ -55,12 +70,23 @@ export default function About() {
         variants={itemVariants}
         $hasImage={!!activeBackground}
         $isSticky={isSticky}
+        id={id}
       >
         <about.NavLinks>
-          <about.Link $hasImage={!!activeBackground}>Pacotes</about.Link>
-          <about.Link $hasImage={!!activeBackground}>Galeria</about.Link>
+          <about.Link
+            $hasImage={!!activeBackground}
+            onClick={() => handleScrollTo('pricing')}
+          >
+            Pacotes
+          </about.Link>
+          <about.Link
+            $hasImage={!!activeBackground}
+            onClick={() => handleScrollTo('gallery')}
+          >
+            Galeria
+          </about.Link>
           <about.Link $hasImage={!!activeBackground}>Contato</about.Link>
-          <about.Link $hasImage={!!activeBackground}>Preço</about.Link>
+          <about.Link $hasImage={!!activeBackground}>Testemunhos</about.Link>
         </about.NavLinks>
       </about.DivNav>
 

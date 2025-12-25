@@ -5,7 +5,7 @@ const ParticleSection = ({ children, id }) => {
   const [particles, setParticles] = useState([]);
 
   useEffect(() => {
-    const particleCount = 100;
+    const particleCount = 150;
 
     const generatedParticles = Array.from({ length: particleCount }).map(
       (_, i) => ({
@@ -36,7 +36,7 @@ const ParticleSection = ({ children, id }) => {
           }}
           animate={{
             y: [0, -80],
-            x: [0, 20, 0],
+            x: [0, 50],
             opacity: [0, 0.5, 0],
           }}
           transition={{
