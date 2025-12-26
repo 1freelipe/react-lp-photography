@@ -39,6 +39,7 @@ export const DivContent = styled.section`
   padding: 20px;
   gap: 30px;
   position: relative;
+  margin-bottom: 100px;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
