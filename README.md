@@ -1,8 +1,8 @@
-##Aplicação frontend desenvolvida para apresentação profissional de trabalhos fotográficos, com foco em estética, fluidez e organização de código. O projeto foi construído para oferecer uma experiência visual envolvente, aliando desempenho, escalabilidade e boas práticas de desenvolvimento frontend.
+## Aplicação frontend desenvolvida para apresentação profissional de trabalhos fotográficos, com foco em estética, fluidez e organização de código. O projeto foi construído para oferecer uma experiência visual envolvente, aliando desempenho, escalabilidade e boas práticas de desenvolvimento frontend.
 
-##Stack Tecnológica
+## Stack Tecnológica
 
-###React
+### React
 
 - Base da aplicação, responsável pela construção da interface de forma declarativa.
 
@@ -10,7 +10,7 @@
 
 - Utilização de hooks para gerenciamento de estado e controle do comportamento da interface.
 
-###Styled-components
+### Styled-components
 
 - Estilização moderna utilizando o conceito de CSS-in-JS.
 
@@ -20,7 +20,7 @@
 
 - Possibilidade de padronização visual através de temas.
 
-###Framer Motion
+### Framer Motion
 
 - Implementação de animações leves e elegantes.
 
@@ -28,7 +28,7 @@
 
 - Interações visuais que valorizam o conteúdo sem comprometer a performance.
 
-###Processo de Desenvolvimento
+### Processo de Desenvolvimento
 
 - Planejamento da estrutura visual e componentização desde o início do projeto.
 
@@ -38,7 +38,7 @@
 
 - Inclusão de animações de forma estratégica para enriquecer a experiência do usuário.
 
-###Funcionalidades Implementadas
+### Funcionalidades Implementadas
 
 1. Navegação intuitiva entre as seções do portfólio.
 
@@ -48,7 +48,7 @@
 
 4. Layout totalmente responsivo, adaptado para diferentes dispositivos.
 
-###Estratégia de SEO e Captação de Leads
+### Estratégia de SEO e Captação de Leads
 
 1. Estrutura semântica otimizada para mecanismos de busca.
 
@@ -62,7 +62,7 @@
 
 6. Integração com Google Analytics para monitoramento de acessos e comportamento do usuário.
 
-###Acompanhamento de métricas relevantes para avaliação de performance e conversão.
+### Acompanhamento de métricas relevantes para avaliação de performance e conversão.
 
 - Base preparada para análise de dados e tomada de decisões estratégicas.
 
