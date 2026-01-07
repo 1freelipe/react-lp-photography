@@ -7,6 +7,7 @@ import Pricing from './sections/pricing/Pricing';
 import Gallery from './sections/gallery/gallery';
 import Testmonials from './sections/testmonials/testmonials';
 import Contact from './sections/contact/contact';
+import Footer from './components/Footer/footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Gallery id="gallery" />
       <Testmonials id="testmonials" />
       <Contact id="contact" />
+      <Footer />
     </>
   );
 }
