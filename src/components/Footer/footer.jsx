@@ -9,10 +9,10 @@ export default function Footer() {
     <footer.Container>
       <footer.Title>Acompanhe as redes</footer.Title>
       <footer.IconsWrapper>
-        <FaWhatsapp />
-        <FaInstagram />
-        <FaTwitter />
-        <GrFacebookOption />
+        <FaWhatsapp className="whats" />
+        <FaInstagram className="insta" />
+        <FaTwitter className="twitter" />
+        <GrFacebookOption className="face" />
       </footer.IconsWrapper>
 
       <footer.SubFooter>

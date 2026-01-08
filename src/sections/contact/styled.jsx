@@ -19,6 +19,12 @@ export const Title = styled(motion.h2)`
   font-style: italic;
   font-size: 50px;
   text-align: center;
+
+  &.secondTitle {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
 `;
 
 export const Information = styled(motion.p)`
@@ -30,8 +36,12 @@ export const Information = styled(motion.p)`
   &.infoContact {
     position: absolute;
     top: -60px;
-    left: 16%;
-    font-weight: 400;
+    left: 14%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 18px;
+    padding: 10px;
 
     span {
       color: #4fce5d;
@@ -54,22 +64,31 @@ export const ContactContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   position: relative;
   margin-top: 80px;
+  height: 700px;
 `;
 
-export const LocationContainer = styled.div`
+export const ContactImage = styled(motion.div)`
   width: 50%;
-  height: 600px;
+  padding: 10px;
+  background: #252525;
+  height: 100%;
+  border-radius: 15px;
+  border: 2px solid #eb9d52;
+`;
+
+export const LocationContainer = styled(motion.div)`
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
+  margin-top: 90px;
 `;
 
-export const MapContainer = styled.div`
+export const MapContainer = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,15 +98,16 @@ export const MapContainer = styled.div`
   .map {
     border: 0;
     border-radius: 12px;
-    width: 100%;
+    width: 650px;
     box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.3);
   }
 `;
 
-export const IconsWrapper = styled.div`
+export const IconsWrapper = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   gap: 20px;
 
   .insta {
@@ -120,13 +140,16 @@ export const Wrapper = styled.div`
   gap: 5px;
 `;
 
-export const Form = styled.form`
+export const Form = styled(motion.form)`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   width: 90%;
-  gap: 20px;
+  gap: 30px;
+  padding: 20px;
+  height: 100%;
+  position: relative;
 `;
 
 export const NameLastName = styled.div`
@@ -137,46 +160,58 @@ export const NameLastName = styled.div`
   gap: 20px;
 `;
 
-export const NameInput = styled.input`
+export const NameInput = styled(motion.input)`
   width: 50%;
   border: none;
   padding: 10px;
   border: 2px solid #c3c6d1;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  font-style: normal;
+  font-style: italic;
   border-radius: 9px;
   font-size: 20px;
   outline: none;
+
+  &:focus {
+    border-color: rgba(0, 0, 0, 0.6);
+  }
 `;
 
-export const LastName = styled.input`
+export const LastName = styled(motion.input)`
   width: 50%;
   border: none;
   padding: 10px;
   border: 2px solid #c3c6d1;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  font-style: normal;
+  font-style: italic;
   border-radius: 9px;
   font-size: 20px;
   outline: none;
+
+  &:focus {
+    border-color: rgba(0, 0, 0, 0.6);
+  }
 `;
 
-export const Service = styled.input`
-  width: 50%;
+export const Service = styled(motion.input)`
+  width: 100%;
   border: none;
   padding: 10px;
   border: 2px solid #c3c6d1;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  font-style: normal;
+  font-style: italic;
   border-radius: 9px;
   font-size: 20px;
   outline: none;
+
+  &:focus {
+    border-color: rgba(0, 0, 0, 0.6);
+  }
 `;
 
-export const Faq = styled.textarea`
+export const Faq = styled(motion.textarea)`
   width: 100%;
   height: 200px;
   border: none;
@@ -184,16 +219,19 @@ export const Faq = styled.textarea`
   border: 2px solid #c3c6d1;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  font-style: normal;
+  font-style: italic;
   border-radius: 9px;
   font-size: 20px;
   outline: none;
+
+  &:focus {
+    border-color: rgba(0, 0, 0, 0.6);
+  }
 `;
 
-export const Button = styled.button`
-  width: 250px;
+export const Button = styled(motion.button)`
+  width: 200px;
   padding: 10px;
-  border: none;
   border: 1px solid #fffff0;
   background: #252525;
   color: #fffff0;
@@ -201,14 +239,13 @@ export const Button = styled.button`
   align-items: center;
   justify-content: center;
   font-family: 'Poppins', sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   border-radius: 9px;
   font-size: 17px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
-
-  &:hover {
-    transform: scale(1.05);
-  }
+  position: absolute;
+  bottom: 0;
+  right: 3%;
 `;

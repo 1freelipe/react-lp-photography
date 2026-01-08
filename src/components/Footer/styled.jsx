@@ -9,6 +9,7 @@ export const Container = styled.footer`
   flex-direction: column;
   gap: 30px;
   padding: 10px 0 0;
+  margin-top: 50px;
 `;
 
 export const Title = styled.h3`
@@ -16,7 +17,7 @@ export const Title = styled.h3`
   font-weight: 200;
   font-style: italic;
   color: #fffff0;
-  font-size: 25px;
+  font-size: 18px;
 `;
 
 export const IconsWrapper = styled.div`
@@ -25,7 +26,19 @@ export const IconsWrapper = styled.div`
   justify-content: center;
   gap: 50px;
   color: #fffff0;
-  font-size: 30px;
+  font-size: 35px;
+
+  .whats,
+  .insta,
+  .twitter,
+  .face {
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1) rotate(9deg);
+    }
+  }
 `;
 
 export const SubFooter = styled.div`
