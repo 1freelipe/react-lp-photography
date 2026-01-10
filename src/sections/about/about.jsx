@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useScroll, useMotionValueEvent } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
+import { HiArrowUturnUp } from 'react-icons/hi2';
 
 import ViewfinderOverlay from '../../components/ViewFinderOverlay/ViewFinder';
 import * as about from './styled';
@@ -52,6 +53,14 @@ export default function About({ id }) {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  };
+
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
@@ -96,6 +105,12 @@ export default function About({ id }) {
             onClick={() => handleScrollTo('contact')}
           >
             Contato
+          </about.Link>
+          <about.Link>
+            <HiArrowUturnUp
+              className="arrowTop"
+              onClick={() => scrollToTop()}
+            />
           </about.Link>
         </about.NavLinks>
       </about.DivNav>

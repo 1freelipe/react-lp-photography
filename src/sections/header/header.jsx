@@ -8,17 +8,42 @@ import ParticleSection from '../../components/ParticlesSection/ParticlesSection'
 import * as header from './styled';
 
 export default function Header() {
+  const handleScrollTo = (id) => {
+    const element = document.getElementById(id);
+
+    if (element) {
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <ParticleSection>
       <header.DivNav>
         <header.Logo>Logo</header.Logo>
         <header.DivNavLinks>
           <header.NavLinks>
-            <header.Link>Sobre</header.Link>
-            <header.Link>Galeria</header.Link>
-            <header.Link>Pacotes</header.Link>
-            <header.Link>Depoimentos</header.Link>
-            <header.Link>Contato</header.Link>
+            <header.Link onClick={() => handleScrollTo('about')}>
+              Sobre
+            </header.Link>
+            <header.Link onClick={() => handleScrollTo('pricing')}>
+              Pacotes
+            </header.Link>
+            <header.Link onClick={() => handleScrollTo('gallery')}>
+              Galeria
+            </header.Link>
+            <header.Link onClick={() => handleScrollTo('testmonials')}>
+              Depoimentos
+            </header.Link>
+            <header.Link onClick={() => handleScrollTo('contact')}>
+              Contato
+            </header.Link>
           </header.NavLinks>
         </header.DivNavLinks>
 
@@ -57,7 +82,9 @@ export default function Header() {
           </header.Content>
 
           <header.ButtonWrapper>
-            <header.ButtonP>Conheça mais</header.ButtonP>
+            <header.ButtonP onClick={() => handleScrollTo('pricing')}>
+              Conheça mais
+            </header.ButtonP>
             <header.ButtonC>Entre em Contato</header.ButtonC>
           </header.ButtonWrapper>
         </header.DivContent>
@@ -69,7 +96,10 @@ export default function Header() {
         transition={{ duration: 1, repeat: Infinity, ease: 'easeInOut' }}
         whileHover={{ scale: 1.2 }}
       >
-        <IoMdArrowDown className="arrow" />
+        <IoMdArrowDown
+          className="arrow"
+          onClick={() => handleScrollTo('about')}
+        />
       </header.DivArrow>
     </ParticleSection>
   );

@@ -71,6 +71,10 @@ export const Link = styled.li`
   &:hover::after {
     width: 100%;
   }
+
+  .arrowTop {
+    font-size: 20px;
+  }
 `;
 
 export const DivContent = styled(motion.div)`
