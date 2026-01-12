@@ -16,7 +16,9 @@ export default function Footer() {
       </footer.IconsWrapper>
 
       <footer.SubFooter>
-        <footer.Information>Todos os direitos reservados</footer.Information>
+        <footer.Information>
+          Todos os direitos reservados - Lucas Duarte Fotografias
+        </footer.Information>
       </footer.SubFooter>
     </footer.Container>
   );
