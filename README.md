@@ -1,5 +1,3 @@
-## Aplicação frontend desenvolvida para apresentação profissional de trabalhos fotográficos, com foco em estética, fluidez e organização de código. O projeto foi construído para oferecer uma experiência visual envolvente, aliando desempenho, escalabilidade e boas práticas de desenvolvimento frontend.
-
 ## Stack Tecnológica
 
 ### React
