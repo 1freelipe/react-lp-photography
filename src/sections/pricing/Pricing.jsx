@@ -176,6 +176,9 @@ export default function Pricing({ id }) {
         <pricing.Information variants={itemVariants}>
           Confira abaixo, todos os pacotes oferecidos.
         </pricing.Information>
+        <pricing.Information>
+          Navegue livremente sobre eles e escolha o que mais combina com você.
+        </pricing.Information>
       </pricing.DivInformation>
 
       <div
