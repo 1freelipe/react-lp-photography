@@ -18,7 +18,8 @@ export const DivNav = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 95%;
-  margin: 10px auto;
+  margin: 10px auto 50px;
+  padding: 5px;
 `;
 
 export const Logo = styled.h2`
@@ -196,6 +197,7 @@ export const DivImage = styled(motion.div)`
     left: -21%;
     top: -9%;
     z-index: -1000;
+    opacity: 0.9;
   }
 `;
 

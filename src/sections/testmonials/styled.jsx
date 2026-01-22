@@ -73,7 +73,7 @@ export const CardTest = styled.div`
 
   &:hover {
     transform: translateY(-20px);
-    box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.8);
+    box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.6);
   }
 `;
 

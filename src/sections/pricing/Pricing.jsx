@@ -70,7 +70,7 @@ export default function Pricing({ id }) {
   };
 
   const prevStep = () => {
-    setDirection(1);
+    setDirection(-1);
     if (index - itemsPerPage >= 0) {
       setIndex(index - itemsPerPage);
     } else {
@@ -96,7 +96,7 @@ export default function Pricing({ id }) {
         <pricing.Information variants={itemVariants}>
           Confira abaixo, todos os pacotes oferecidos.
         </pricing.Information>
-        <pricing.Information>
+        <pricing.Information variants={itemVariants}>
           Navegue livremente sobre eles e escolha o que mais combina com você.
         </pricing.Information>
       </pricing.DivInformation>
