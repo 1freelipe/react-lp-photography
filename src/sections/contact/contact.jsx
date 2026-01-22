@@ -52,7 +52,11 @@ export default function Contact({ id }) {
       >
         <contact.ContactContainer>
           <contact.ContactImage variants={itemVariants}>
-            <img src={ContactImg} loading="lazy" />
+            <img
+              src={ContactImg}
+              loading="lazy"
+              alt="Foto do fotógrafo, olhando para o lado e sorrindo descontraído."
+            />
           </contact.ContactImage>
           <contact.Information className="infoContact" variants={itemVariants}>
             O formulário levará todas as suas dúvidas diretamente ao{' '}

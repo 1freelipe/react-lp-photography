@@ -94,7 +94,10 @@ export default function Header() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: 'easeInOut', delay: 0.5 }}
         >
-          <img src={ImgHeader} />
+          <img
+            src={ImgHeader}
+            alt="Imagem do fotógrafo ajoelhado, olhando para frente com a câmera na mão na altura do joelho"
+          />
         </header.DivImage>
       </header.MainSection>
 
