@@ -4,6 +4,7 @@ import { GrFacebookOption } from 'react-icons/gr';
 import { IoMdArrowDown } from 'react-icons/io';
 
 import ParticleSection from '../../components/ParticlesSection/ParticlesSection';
+import ImgHeader from '../../assets/img/contact.png';
 
 import * as header from './styled';
 
@@ -65,7 +66,7 @@ export default function Header() {
 
       <header.MainSection>
         <header.DivContent
-          initial={{ x: -80, opacity: 0 }}
+          initial={{ x: -160, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{
             duration: 1,
@@ -88,7 +89,13 @@ export default function Header() {
             <header.ButtonC>Entre em Contato</header.ButtonC>
           </header.ButtonWrapper>
         </header.DivContent>
-        <header.DivImage />
+        <header.DivImage
+          initial={{ x: 160, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: 'easeInOut', delay: 0.5 }}
+        >
+          <img src={ImgHeader} />
+        </header.DivImage>
       </header.MainSection>
 
       <header.DivArrow

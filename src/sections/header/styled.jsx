@@ -173,20 +173,30 @@ export const DivArrow = styled(motion.div)`
 
 export const DivContent = styled(motion.div)`
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   flex-direction: column;
-  width: 80%;
-  height: 700px;
+  width: 70%;
+  height: 650px;
   padding: 20px;
   gap: 20px;
   line-height: 2;
 `;
 
-export const DivImage = styled.div`
+export const DivImage = styled(motion.div)`
   width: 50%;
   height: 800px;
   padding: 20px;
+  position: relative;
+
+  img {
+    width: 69%;
+    height: auto;
+    position: absolute;
+    left: -21%;
+    top: -9%;
+    z-index: -1000;
+  }
 `;
 
 export const MyName = styled.h1`

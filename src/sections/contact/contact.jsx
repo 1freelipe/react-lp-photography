@@ -3,6 +3,7 @@ import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
 
 import * as contact from './styled';
 import ParticlesBlack from '../../components/ParticlesBlack/ParticlesBlack';
+import ContactImg from '../../assets/img/perfil.jpeg';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -50,7 +51,9 @@ export default function Contact({ id }) {
         viewport={{ once: true, amount: 0.3 }}
       >
         <contact.ContactContainer>
-          <contact.ContactImage variants={itemVariants} />
+          <contact.ContactImage variants={itemVariants}>
+            <img src={ContactImg} loading="lazy" />
+          </contact.ContactImage>
           <contact.Information className="infoContact" variants={itemVariants}>
             O formulário levará todas as suas dúvidas diretamente ao{' '}
             <span>WhatsApp</span> do fotógrafo.

@@ -70,12 +70,16 @@ export const ContactContainer = styled.div`
 `;
 
 export const ContactImage = styled(motion.div)`
-  width: 50%;
-  padding: 10px;
-  background: #252525;
+  width: 80%;
   height: 100%;
   border-radius: 15px;
   border: 2px solid #eb9d52;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const LocationContainer = styled(motion.div)`
