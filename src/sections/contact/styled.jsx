@@ -57,6 +57,10 @@ export const Container = styled(motion.section)`
   justify-content: center;
   padding: 20px;
   gap: 20px;
+
+  @media (max-width: 1024px) {
+    display: block;
+  }
 `;
 
 export const ContactContainer = styled.div`
@@ -67,6 +71,10 @@ export const ContactContainer = styled.div`
   position: relative;
   margin-top: 80px;
   height: 700px;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 export const ContactImage = styled(motion.div)`
@@ -80,6 +88,10 @@ export const ContactImage = styled(motion.div)`
     width: 100%;
     height: 100%;
   }
+
+  @media (max-width: 476px) {
+    display: none;
+  }
 `;
 
 export const LocationContainer = styled(motion.div)`
@@ -90,6 +102,10 @@ export const LocationContainer = styled(motion.div)`
   flex-direction: column;
   gap: 30px;
   margin-top: 90px;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 export const MapContainer = styled(motion.div)`
