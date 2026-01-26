@@ -13,7 +13,7 @@ export const AboutSection = styled(motion.section)`
   background-position: center;
   transition: background 0.5s ease-in-out;
   color: ${(props) => (props.$bgImage ? '#fffff0' : '#252525')};
-  overflow: visible;
+  overflow: hidden;
 `;
 
 export const DivNav = styled(motion.nav)`
