@@ -198,11 +198,12 @@ export const DivImage = styled(motion.div)`
   pointer-events: none;
 
   img {
-    width: 100%;
-    max-width: 550px;
+    width: 50%;
     height: auto;
     opacity: 0.9;
     transform: translateX(-50%) translateY(-15%);
+    position: relative;
+    z-index: -100;
   }
 
   /* @media (max-width: 900px) {
