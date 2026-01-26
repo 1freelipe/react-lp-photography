@@ -3,6 +3,7 @@ import { useScroll, useMotionValueEvent } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { HiArrowUturnUp } from 'react-icons/hi2';
 import { IoIosArrowBack } from 'react-icons/io';
+import { GrClose } from 'react-icons/gr';
 
 import ViewfinderOverlay from '../../components/ViewFinderOverlay/ViewFinder';
 import * as about from './styled';
@@ -44,6 +45,16 @@ const sideBarVariants = {
   },
   closed: {
     x: 120,
+  },
+};
+
+const arrowVariants = {
+  open: {
+    x: -103,
+    transition: { type: 'spring', stiffness: 300, damping: 30 },
+  },
+  closed: {
+    x: 0,
   },
 };
 
@@ -161,7 +172,12 @@ export default function About({ id }) {
           </about.Ass>
         </about.DivContent>
 
-        <about.ArrowSide onClick={() => setOpen(!open)}>
+        <about.ArrowSide
+          onClick={() => setOpen(!open)}
+          variants={arrowVariants}
+          animate={open ? 'open' : 'closed'}
+          initial={closed}
+        >
           <IoIosArrowBack className="arrowSide" />
         </about.ArrowSide>
 
@@ -190,7 +206,7 @@ export default function About({ id }) {
           $hasImage={!!activeBackground}
           onClick={() => setActiveBackground(null)}
         >
-          Limpar
+          <GrClose />
         </about.Clear>
       </about.AboutSection>
     </>

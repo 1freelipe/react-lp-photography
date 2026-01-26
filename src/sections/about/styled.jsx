@@ -172,18 +172,21 @@ export const Img = styled.div`
 `;
 
 export const Clear = styled.button`
-  width: 70px;
+  width: 40px;
+  height: 40px;
   border: 1px solid #c3c6d1;
   background: red;
   position: absolute;
-  right: 1.5%;
+  right: 2.2%;
   top: 15%;
   padding: 6px;
   color: #252525;
   background: #fffff0;
-  border-radius: 9px;
+  border-radius: 50%;
   font-size: 15px;
-  display: ${(props) => (props.$hasImage ? 'block' : 'none')};
+  display: ${(props) => (props.$hasImage ? 'flex' : 'none')};
+  align-items: ${(props) => (props.$hasImage ? 'center' : 'none')};
+  justify-content: ${(props) => (props.$hasImage ? 'center' : 'none')};
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-style: italic;
@@ -193,12 +196,17 @@ export const Clear = styled.button`
   &:hover {
     transform: scale(1.1);
   }
+
+  @media (max-width: 768px) {
+    right: 5%;
+  }
 `;
 
-export const ArrowSide = styled.button`
+export const ArrowSide = styled(motion.button)`
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 45%;
+  transform: translateX(-50%);
   transform: translateY(-50%);
   width: 30px;
   height: 60px;
