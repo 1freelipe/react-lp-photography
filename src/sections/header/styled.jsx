@@ -112,12 +112,14 @@ export const IconsWrapper = styled.div`
 `;
 
 export const MainSection = styled.section`
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
   width: 100%;
   gap: 20px;
-  padding: 20px;
+  padding: 40px 5%;
   position: relative;
+  margin-bottom: 50px;
 
   &::before {
     content: '';
@@ -125,7 +127,7 @@ export const MainSection = styled.section`
     width: 80%;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 30px;
+    bottom: 0px;
     height: 150px;
     z-index: 0;
     pointer-events: none;
@@ -149,7 +151,7 @@ export const MainSection = styled.section`
     transform: translateX(-50%);
     height: 1px;
     background: #fffff0;
-    bottom: 180px;
+    bottom: 18.5%;
     z-index: 1;
     box-shadow: 0 0 4px rgba(255, 255, 240, 0.8);
   }
@@ -177,28 +179,38 @@ export const DivContent = styled(motion.div)`
   align-items: flex-end;
   justify-content: center;
   flex-direction: column;
-  width: 70%;
+  width: 100%;
   height: 650px;
   padding: 20px;
   gap: 20px;
   line-height: 2;
+
+  @media (max-width: 768px) {
+    margin-bottom: 100px;
+  }
 `;
 
 export const DivImage = styled(motion.div)`
-  width: 50%;
-  height: 800px;
   padding: 20px;
-  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  pointer-events: none;
 
   img {
-    width: 69%;
+    width: 100%;
+    max-width: 550px;
     height: auto;
-    position: absolute;
-    left: -21%;
-    top: -9%;
-    z-index: -1000;
     opacity: 0.9;
+    transform: translateX(-50%) translateY(-15%);
   }
+
+  /* @media (max-width: 900px) {
+    img {
+      transform: translateX(0) translateY(0);
+      max-width: 300px;
+    }
+  } */
 `;
 
 export const MyName = styled.h1`
@@ -208,6 +220,10 @@ export const MyName = styled.h1`
   font-weight: 500;
   font-style: normal;
   font-size: 60px;
+  width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 `;
 
 export const Content = styled.p`
