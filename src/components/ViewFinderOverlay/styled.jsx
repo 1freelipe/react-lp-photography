@@ -9,6 +9,7 @@ export const OverlayContainer = styled.div`
   height: 100%;
   pointer-events: none;
   z-index: 10;
+  overflow: hidden;
 `;
 
 export const Line = styled(motion.div)`

@@ -92,6 +92,10 @@ export const DivContent = styled(motion.div)`
   margin: 0 auto;
   line-height: 2;
   text-align: center;
+
+  @media (min-width: 430px) and (max-width: 568px) {
+    width: 80%;
+  }
 `;
 
 export const MyName = styled(motion.h2)`
@@ -199,6 +203,10 @@ export const Clear = styled.button`
 
   @media (max-width: 768px) {
     right: 5%;
+  }
+
+  @media (max-width: 430px) {
+    right: 8%;
   }
 `;
 
