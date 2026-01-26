@@ -2,12 +2,15 @@ import React, { useState } from 'react';
 import { useScroll, useMotionValueEvent } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { HiArrowUturnUp } from 'react-icons/hi2';
+import { IoIosArrowBack } from 'react-icons/io';
 
 import ViewfinderOverlay from '../../components/ViewFinderOverlay/ViewFinder';
 import * as about from './styled';
 import img1 from '../../assets/img/ft1.webp';
 import img2 from '../../assets/img/ft2.webp';
 import img3 from '../../assets/img/ft3.jpg';
+
+const isMobile = window.innerWidth <= 768;
 
 const portfolioPhotos = [
   { id: 1, src: img1 },
@@ -34,10 +37,20 @@ const itemVariants = {
   },
 };
 
+const sideBarVariants = {
+  open: {
+    x: 0,
+    transition: { type: 'spring', stiffness: 300, damping: 30 },
+  },
+  closed: {
+    x: 120,
+  },
+};
+
 export default function About({ id }) {
   const [activeBackground, setActiveBackground] = useState(null);
   const [isSticky, setIsSticky] = useState(false);
-
+  const [open, setOpen] = useState(false);
   const handleScrollTo = (id) => {
     const element = document.getElementById(id);
 
@@ -148,7 +161,15 @@ export default function About({ id }) {
           </about.Ass>
         </about.DivContent>
 
-        <about.SideBarRight variants={itemVariants}>
+        <about.ArrowSide onClick={() => setOpen(!open)}>
+          <IoIosArrowBack className="arrowSide" />
+        </about.ArrowSide>
+
+        <about.SideBarRight
+          variants={sideBarVariants}
+          animate={isMobile ? (open ? 'open' : 'closed') : 'open'}
+          initial={isMobile ? 'closed' : 'open'}
+        >
           <about.ImgWrapper>
             {portfolioPhotos.map((photo) => (
               <about.Img

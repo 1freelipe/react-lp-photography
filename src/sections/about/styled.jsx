@@ -20,7 +20,7 @@ export const DivNav = styled(motion.nav)`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30%;
+  width: auto;
   min-width: 400px;
   border: 1px solid
     ${(props) => (props.$hasImage ? 'rgba(255, 255, 255, 0.2)' : '#c3c6d1')};
@@ -34,6 +34,10 @@ export const DivNav = styled(motion.nav)`
   transform: translateX(-50%);
   z-index: 1000;
   background: #fffff0;
+
+  @media (max-width: 620px) {
+    display: none;
+  }
 `;
 
 export const NavLinks = styled.ul`
@@ -82,13 +86,12 @@ export const DivContent = styled(motion.div)`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 1200px;
-  height: 930px;
+  width: 60%;
+  height: auto;
+  min-height: 930px;
   margin: 0 auto;
-  border-radius: 12px;
   line-height: 2;
   text-align: center;
-  position: relative;
 `;
 
 export const MyName = styled(motion.h2)`
@@ -97,6 +100,10 @@ export const MyName = styled(motion.h2)`
   font-weight: 500;
   font-style: normal;
   font-size: 60px;
+
+  @media (min-width: 400px) and (max-width: 800px) {
+    font-size: 40px;
+  }
 `;
 
 export const Content = styled(motion.p)`
@@ -107,12 +114,15 @@ export const Content = styled(motion.p)`
 `;
 
 export const Ass = styled.div`
-  position: absolute;
-  bottom: 220px;
-  right: 150px;
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-style: italic;
+  align-self: flex-end;
+  margin-top: 20px;
+
+  @media (min-width: 467px) and (max-width: 1320px) {
+    bottom: 150px;
+  }
 `;
 
 export const SideBarRight = styled(motion.div)`
@@ -127,6 +137,10 @@ export const SideBarRight = styled(motion.div)`
   box-shadow: -2px 5px 6px #c3c6d1;
   padding: 20px;
   z-index: 100;
+
+  @media (max-width: 768px) {
+    width: 90px;
+  }
 `;
 
 export const ImgWrapper = styled.div`
@@ -178,5 +192,31 @@ export const Clear = styled.button`
 
   &:hover {
     transform: scale(1.1);
+  }
+`;
+
+export const ArrowSide = styled.button`
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 60px;
+  border-radius: 8px 0 0 8px;
+  background: #c3c6d1;
+  border: none;
+  cursor: pointer;
+  z-index: 101;
+  display: none;
+
+  .arrowSide {
+    font-size: 40px;
+    color: #252525;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
