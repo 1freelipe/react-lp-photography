@@ -208,7 +208,7 @@ export const MainSection = styled.section`
     margin-top: 130px;
   }
 
-  @media (min-width: 820px) {
+  @media (min-width: 820px) and (max-width: 1024px) {
     margin-top: 180px;
   }
 `;
