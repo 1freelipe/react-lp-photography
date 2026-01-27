@@ -2,6 +2,7 @@ import React from 'react';
 import { FaWhatsapp, FaInstagram, FaTwitter } from 'react-icons/fa';
 import { GrFacebookOption } from 'react-icons/gr';
 import { IoMdArrowDown } from 'react-icons/io';
+import { CiMenuFries } from 'react-icons/ci';
 
 import ParticleSection from '../../components/ParticlesSection/ParticlesSection';
 import ImgHeader from '../../assets/img/contact.png';
@@ -26,6 +27,12 @@ export default function Header() {
 
   return (
     <ParticleSection>
+      <header.DivNavSecond>
+        <CiMenuFries />
+        <header.MyName className="secondTitle">
+          Lucas Duarte Fotografias
+        </header.MyName>
+      </header.DivNavSecond>
       <header.DivNav>
         <header.Logo>Logo</header.Logo>
         <header.DivNavLinks>

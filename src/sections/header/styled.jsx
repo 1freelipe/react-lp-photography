@@ -20,6 +20,27 @@ export const DivNav = styled.div`
   width: 95%;
   margin: 10px auto 50px;
   padding: 5px;
+
+  @media (max-width: 899px) {
+    justify-content: center;
+  }
+
+  @media (min-width: 400px) and (max-width: 600px) {
+    display: none;
+  }
+`;
+
+export const DivNavSecond = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  width: 95%;
+  margin: 10px auto 50px;
+
+  @media (min-width: 599px) {
+    display: none;
+  }
 `;
 
 export const Logo = styled.h2`
@@ -28,6 +49,10 @@ export const Logo = styled.h2`
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-style: normal;
+
+  @media (min-width: 400px) and (max-width: 1300px) {
+    display: none;
+  }
 `;
 
 export const NavLinks = styled.ul`
@@ -109,6 +134,10 @@ export const IconsWrapper = styled.div`
   align-items: center;
   justify-content: center;
   gap: 15px;
+
+  @media (max-width: 899px) {
+    display: none;
+  }
 `;
 
 export const MainSection = styled.section`
@@ -151,9 +180,22 @@ export const MainSection = styled.section`
     transform: translateX(-50%);
     height: 1px;
     background: #fffff0;
-    bottom: 18.5%;
+    bottom: 20.5%;
     z-index: 1;
     box-shadow: 0 0 4px rgba(255, 255, 240, 0.8);
+
+    @media (min-width: 1100px) and (max-width: 1400px) {
+      bottom: 25%;
+    }
+  }
+
+  @media (min-width: 420px) and (max-width: 900px) {
+    padding: 0;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 1100px) and (max-width: 1400px) {
+    margin-top: 130px;
   }
 `;
 
@@ -179,14 +221,28 @@ export const DivContent = styled(motion.div)`
   align-items: flex-end;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
   height: 650px;
   padding: 20px;
   gap: 20px;
   line-height: 2;
 
-  @media (max-width: 768px) {
-    margin-bottom: 100px;
+  @media (min-width: 400px) and (max-width: 900px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  @media (min-width: 901px) and (max-width: 1099px) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: 1100px) and (max-width: 1400px) {
+    height: auto;
+    margin-bottom: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -196,22 +252,38 @@ export const DivImage = styled(motion.div)`
   align-items: flex-start;
   justify-content: center;
   pointer-events: none;
+  width: 100%;
+  height: 100%;
 
   img {
-    width: 50%;
+    width: 60%;
     height: auto;
-    opacity: 0.9;
+    opacity: 0.8;
     transform: translateX(-50%) translateY(-15%);
     position: relative;
     z-index: -100;
   }
 
-  /* @media (max-width: 900px) {
+  @media (min-width: 420px) and (max-width: 576px) {
     img {
-      transform: translateX(0) translateY(0);
-      max-width: 300px;
+      position: absolute;
+      top: 15%;
+      width: 100%;
+      right: -48%;
     }
-  } */
+  }
+
+  @media (min-width: 577px) and (max-width: 768px) {
+    position: absolute;
+    top: 3%;
+    width: 100%;
+    right: -30%;
+  }
+
+  @media (min-width: 769px) and (max-width: 1099px) {
+    position: absolute;
+    right: -30%;
+  }
 `;
 
 export const MyName = styled.h1`
@@ -221,10 +293,29 @@ export const MyName = styled.h1`
   font-weight: 500;
   font-style: normal;
   font-size: 60px;
-  width: 800px;
+  width: auto;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  &.secondTitle {
+    font-size: 25px;
+    font-style: italic;
+    opacity: 0.9;
+  }
+
+  @media (min-width: 400px) and (max-width: 900px) {
+    font-size: 35px;
+  }
+
+  @media (min-width: 1100px) {
+    font-size: 50px;
+  }
+
+  @media (min-width: 1101px) and (max-width: 1400px) {
+    font-size: 40px;
+    white-space: nowrap;
+  }
 `;
 
 export const Content = styled.p`
@@ -266,6 +357,11 @@ export const ButtonP = styled.button`
   &:hover {
     transform: scale(1.05);
   }
+
+  @media (min-width: 420px) and (max-width: 900px) {
+    width: 150px;
+    font-size: 14px;
+  }
 `;
 
 export const ButtonC = styled.button`
@@ -286,5 +382,10 @@ export const ButtonC = styled.button`
 
   &:hover {
     transform: scale(1.05);
+  }
+
+  @media (min-width: 420px) and (max-width: 900px) {
+    width: 160px;
+    font-size: 14px;
   }
 `;

@@ -35,7 +35,7 @@ export const DivNav = styled(motion.nav)`
   z-index: 1000;
   background: #fffff0;
 
-  @media (max-width: 620px) {
+  @media (max-width: 1024px) {
     display: none;
   }
 `;
