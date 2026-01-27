@@ -25,6 +25,10 @@ export const Title = styled(motion.h2)`
     margin-bottom: 20px;
     font-weight: 400;
   }
+
+  @media (max-width: 560px) {
+    font-size: 40px;
+  }
 `;
 
 export const Information = styled(motion.p)`
@@ -47,6 +51,30 @@ export const Information = styled(motion.p)`
       color: #4fce5d;
       font-weight: 700;
     }
+
+    @media (max-width: 560px) {
+      font-size: 14px;
+      left: 9%;
+      top: -20px;
+    }
+
+    @media (min-width: 760px) and (max-width: 1024px) {
+      top: -100px;
+      white-space: nowrap;
+      left: -2%;
+    }
+
+    @media (min-width: 820px) and (max-width: 1240px) {
+      left: 2%;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1400px) {
+      left: 12%;
+    }
+  }
+
+  @media (max-width: 560px) {
+    font-size: 14px;
   }
 `;
 
@@ -74,6 +102,10 @@ export const ContactContainer = styled.div`
 
   @media (max-width: 1024px) {
     width: 100%;
+  }
+
+  @media (max-width: 560px) {
+    margin-top: 20px;
   }
 `;
 
@@ -120,6 +152,10 @@ export const MapContainer = styled(motion.div)`
     border-radius: 12px;
     width: 650px;
     box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.3);
+
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
   }
 `;
 
