@@ -209,7 +209,8 @@ export const MainSection = styled.section`
   }
 
   @media (min-width: 820px) and (max-width: 1024px) {
-    margin-top: 180px;
+    margin-top: 165px;
+    padding-right: 0;
   }
 `;
 
@@ -296,7 +297,16 @@ export const DivImage = styled(motion.div)`
 
   @media (min-width: 769px) and (max-width: 1099px) {
     position: absolute;
-    right: -30%;
+    right: -25%;
+    top: 4%;
+    width: 90%;
+  }
+
+  @media (min-width: 1440px) and (max-width: 1798px) {
+    position: absolute;
+    width: 60%;
+    right: -5%;
+    top: 5%;
   }
 `;
 
