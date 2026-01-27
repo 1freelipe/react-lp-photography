@@ -58,7 +58,17 @@ const itemVariants = {
 export default function Pricing({ id }) {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(0);
-  const itemsPerPage = 3;
+  const isMobile = window.innerWidth <= 820;
+  const isTablet = window.innerWidth <= 1024;
+  let itemsPerPage;
+
+  if (isMobile) {
+    itemsPerPage = 1;
+  } else if (isTablet) {
+    itemsPerPage = 2;
+  } else {
+    itemsPerPage = 3;
+  }
 
   const nextStep = () => {
     setDirection(1);

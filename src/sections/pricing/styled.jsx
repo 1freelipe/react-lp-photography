@@ -26,15 +26,27 @@ export const Information = styled(motion.p)`
   font-style: italic;
   color: #fffff0;
   margin-bottom: 30px;
+
+  @media (max-width: 560px) {
+    text-align: center;
+  }
 `;
 
 export const PricingDiv = styled(motion.section)`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1700px;
+  max-width: 1700px;
   gap: 20px;
   position: relative;
+
+  @media (max-width: 560px) {
+    width: auto;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: auto;
+  }
 `;
 
 export const DivArrow = styled.div`
@@ -52,6 +64,11 @@ export const DivArrow = styled.div`
     right: 170px;
     font-size: 50px;
     z-index: 100;
+
+    @media (min-width: 400px) and (max-width: 1440px) {
+      right: 0;
+      top: 55%;
+    }
   }
 
   .Arrow1 {
@@ -61,12 +78,17 @@ export const DivArrow = styled.div`
     left: 170px;
     font-size: 50px;
     z-index: 100;
+
+    @media (min-width: 400px) and (max-width: 1440px) {
+      left: 0;
+      top: 55%;
+    }
   }
 `;
 
 export const CardPricing = styled(motion.div)`
-  width: 450px;
-  height: 690px;
+  min-width: 450px;
+  min-height: 690px;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 12px;
   border: 1px solid #c3c6d1;
@@ -80,6 +102,14 @@ export const CardPricing = styled(motion.div)`
   &.cardFloat {
     margin-bottom: 60px;
     background: #252525;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: 560px) {
+    min-width: 420px;
   }
 `;
 
