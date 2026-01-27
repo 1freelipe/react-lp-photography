@@ -25,7 +25,7 @@ export const DivNav = styled.div`
     justify-content: center;
   }
 
-  @media (min-width: 400px) and (max-width: 600px) {
+  @media (min-width: 350px) and (max-width: 600px) {
     display: none;
   }
 `;
@@ -52,7 +52,7 @@ export const Logo = styled.h2`
   font-weight: 700;
   font-style: normal;
 
-  @media (min-width: 400px) and (max-width: 1300px) {
+  @media (min-width: 350px) and (max-width: 1300px) {
     display: none;
   }
 `;
@@ -199,7 +199,7 @@ export const MainSection = styled.section`
     }
   }
 
-  @media (min-width: 400px) and (max-width: 900px) {
+  @media (min-width: 350px) and (max-width: 900px) {
     padding: 0;
     grid-template-columns: 1fr;
   }
@@ -241,7 +241,7 @@ export const DivContent = styled(motion.div)`
   gap: 20px;
   line-height: 2;
 
-  @media (min-width: 400px) and (max-width: 900px) {
+  @media (min-width: 350px) and (max-width: 900px) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -277,6 +277,15 @@ export const DivImage = styled(motion.div)`
     transform: translateX(-50%) translateY(-15%);
     position: relative;
     z-index: -100;
+  }
+
+  @media (min-width: 350px) and (max-width: 400px) {
+    img {
+      position: absolute;
+      top: 16.5%;
+      right: -67%;
+      width: 120%;
+    }
   }
 
   @media (min-width: 400px) and (max-width: 576px) {
@@ -328,8 +337,8 @@ export const MyName = styled.h1`
     opacity: 0.9;
   }
 
-  @media (min-width: 400px) and (max-width: 900px) {
-    font-size: 35px;
+  @media (min-width: 350px) and (max-width: 900px) {
+    font-size: 30px;
   }
 
   @media (min-width: 1100px) {
@@ -386,8 +395,8 @@ export const ButtonP = styled.button`
     transform: scale(1.05);
   }
 
-  @media (min-width: 400px) and (max-width: 900px) {
-    width: 150px;
+  @media (min-width: 350px) and (max-width: 900px) {
+    width: 145px;
     font-size: 14px;
   }
 `;
@@ -412,8 +421,8 @@ export const ButtonC = styled.button`
     transform: scale(1.05);
   }
 
-  @media (min-width: 400px) and (max-width: 900px) {
-    width: 160px;
+  @media (min-width: 350px) and (max-width: 900px) {
+    width: 155px;
     font-size: 14px;
   }
 `;

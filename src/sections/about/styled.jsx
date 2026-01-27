@@ -93,6 +93,10 @@ export const DivContent = styled(motion.div)`
   line-height: 2;
   text-align: center;
 
+  @media (max-width: 399px) {
+    width: 90%;
+  }
+
   @media (min-width: 430px) and (max-width: 568px) {
     width: 80%;
   }
@@ -105,6 +109,10 @@ export const MyName = styled(motion.h2)`
   font-style: normal;
   font-size: 60px;
 
+  @media (max-width: 399px) {
+    font-size: 35px;
+  }
+
   @media (min-width: 400px) and (max-width: 800px) {
     font-size: 40px;
   }
@@ -115,6 +123,10 @@ export const Content = styled(motion.p)`
   font-weight: 200;
   font-style: italic;
   font-size: 25px;
+
+  @media (max-width: 399px) {
+    font-size: 20px;
+  }
 `;
 
 export const Ass = styled.div`
@@ -144,6 +156,11 @@ export const SideBarRight = styled(motion.div)`
 
   @media (max-width: 768px) {
     width: 90px;
+  }
+
+  @media (max-width: 399px) {
+    height: 50%;
+    top: 29%;
   }
 `;
 
@@ -234,5 +251,9 @@ export const ArrowSide = styled(motion.button)`
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  @media (max-width: 399px) {
+    top: 50%;
   }
 `;

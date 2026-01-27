@@ -65,7 +65,7 @@ export const DivArrow = styled.div`
     font-size: 50px;
     z-index: 100;
 
-    @media (min-width: 400px) and (max-width: 1440px) {
+    @media (min-width: 350px) and (max-width: 1440px) {
       right: 0;
       top: 55%;
     }
@@ -79,7 +79,7 @@ export const DivArrow = styled.div`
     font-size: 50px;
     z-index: 100;
 
-    @media (min-width: 400px) and (max-width: 1440px) {
+    @media (min-width: 350px) and (max-width: 1440px) {
       left: 0;
       top: 55%;
     }
@@ -109,7 +109,7 @@ export const CardPricing = styled(motion.div)`
   }
 
   @media (max-width: 560px) {
-    min-width: 420px;
+    min-width: 370px;
   }
 `;
 
