@@ -19,6 +19,10 @@ export const Title = styled(motion.h2)`
   font-style: italic;
   font-size: 50px;
   text-align: center;
+
+  @media (max-width: 470px) {
+    font-size: 40px;
+  }
 `;
 
 export const Information = styled(motion.p)`
@@ -26,6 +30,10 @@ export const Information = styled(motion.p)`
   font-weight: 200;
   font-style: italic;
   color: #252525;
+
+  @media (max-width: 560px) {
+    text-align: center;
+  }
 `;
 
 export const NavLinks = styled(motion.nav)`
@@ -35,8 +43,17 @@ export const NavLinks = styled(motion.nav)`
   margin-left: 20px;
   border-bottom: 1px solid #c3c6d1;
   padding: 10px;
-  width: 900px;
+  max-width: 900px;
   box-shadow: 0 8px 8px #fffff0;
+
+  @media (max-width: 920px) {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    padding: 5px;
+  }
 `;
 
 export const NavList = styled.ul`
@@ -45,6 +62,15 @@ export const NavList = styled.ul`
   align-items: center;
   justify-content: flex-start;
   gap: 20px;
+
+  @media (max-width: 920px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    gap: 15px;
+    justify-content: center;
+    justify-items: center;
+  }
 `;
 
 export const Links = styled.li`
@@ -64,6 +90,10 @@ export const Links = styled.li`
 
   &:hover {
     transform: scale(1.09);
+  }
+
+  @media (max-width: 460px) {
+    width: 120px;
   }
 `;
 
