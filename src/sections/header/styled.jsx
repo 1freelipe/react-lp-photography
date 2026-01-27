@@ -279,10 +279,10 @@ export const DivImage = styled(motion.div)`
     z-index: -100;
   }
 
-  @media (min-width: 350px) and (max-width: 400px) {
+  @media (min-width: 370px) and (max-width: 400px) {
     img {
       position: absolute;
-      top: 16.5%;
+      top: 13%;
       right: -67%;
       width: 120%;
     }

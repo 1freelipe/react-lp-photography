@@ -22,7 +22,7 @@ export const Title = styled(motion.h2)`
   text-transform: uppercase;
 
   @media (max-width: 560px) {
-    font-size: 37px;
+    font-size: 35px;
   }
 `;
 
@@ -32,7 +32,7 @@ export const Information = styled(motion.p)`
   font-style: italic;
   color: #fffff0;
 
-  @media (min-width: 400px) and (max-width: 560px) {
+  @media (min-width: 370px) and (max-width: 560px) {
     text-align: center;
   }
 `;
