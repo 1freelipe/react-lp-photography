@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaWhatsapp, FaInstagram, FaTwitter } from 'react-icons/fa';
 import { GrFacebookOption } from 'react-icons/gr';
 import { IoMdArrowDown } from 'react-icons/io';
@@ -10,6 +10,18 @@ import ImgHeader from '../../assets/img/contact.png';
 import * as header from './styled';
 
 export default function Header() {
+  const [open, setOpen] = useState(false);
+
+  const menuVariants = {
+    open: {
+      x: 0,
+      transition: { type: 'spring', stiffness: 50, dumping: 30 },
+    },
+    closed: {
+      x: -600,
+    },
+  };
+
   const handleScrollTo = (id) => {
     const element = document.getElementById(id);
 
@@ -27,11 +39,29 @@ export default function Header() {
 
   return (
     <ParticleSection>
+      <header.DivMenu
+        variants={menuVariants}
+        animate={open ? 'open' : 'closed'}
+        initial={'closed'}
+      >
+        <header.Link onClick={() => handleScrollTo('about')}>Sobre</header.Link>
+        <header.Link onClick={() => handleScrollTo('pricing')}>
+          Pacotes
+        </header.Link>
+        <header.Link onClick={() => handleScrollTo('gallery')}>
+          Galeria
+        </header.Link>
+        <header.Link onClick={() => handleScrollTo('testmonials')}>
+          Depoimentos
+        </header.Link>
+        <header.Link onClick={() => handleScrollTo('contact')}>
+          Contato
+        </header.Link>
+      </header.DivMenu>
+
       <header.DivNavSecond>
-        <CiMenuFries />
-        <header.MyName className="secondTitle">
-          Lucas Duarte Fotografias
-        </header.MyName>
+        <CiMenuFries onClick={() => setOpen(!open)} />
+        <header.MyName className="secondTitle">Lucas Duarte</header.MyName>
       </header.DivNavSecond>
       <header.DivNav>
         <header.Logo>Logo</header.Logo>

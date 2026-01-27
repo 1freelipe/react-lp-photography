@@ -37,6 +37,8 @@ export const DivNavSecond = styled.div`
   padding: 5px;
   width: 95%;
   margin: 10px auto 50px;
+  position: relative;
+  z-index: 101;
 
   @media (min-width: 599px) {
     display: none;
@@ -170,6 +172,10 @@ export const MainSection = styled.section`
       transparent 100%
     );
     filter: blur(40px);
+
+    @media (min-width: 600px) and (max-width: 900px) {
+      bottom: -13px;
+    }
   }
 
   &::after {
@@ -187,15 +193,23 @@ export const MainSection = styled.section`
     @media (min-width: 1100px) and (max-width: 1400px) {
       bottom: 25%;
     }
+
+    @media (min-width: 912px) and (max-width: 1024px) {
+      bottom: 19.5%;
+    }
   }
 
-  @media (min-width: 420px) and (max-width: 900px) {
+  @media (min-width: 400px) and (max-width: 900px) {
     padding: 0;
     grid-template-columns: 1fr;
   }
 
   @media (min-width: 1100px) and (max-width: 1400px) {
     margin-top: 130px;
+  }
+
+  @media (min-width: 820px) {
+    margin-top: 180px;
   }
 `;
 
@@ -264,7 +278,7 @@ export const DivImage = styled(motion.div)`
     z-index: -100;
   }
 
-  @media (min-width: 420px) and (max-width: 576px) {
+  @media (min-width: 400px) and (max-width: 576px) {
     img {
       position: absolute;
       top: 15%;
@@ -329,6 +343,10 @@ export const Content = styled.p`
     font-size: 20px;
     margin-bottom: 30px;
   }
+
+  @media (max-width: 500px) {
+    font-size: 20px;
+  }
 `;
 
 export const ButtonWrapper = styled.div`
@@ -358,7 +376,7 @@ export const ButtonP = styled.button`
     transform: scale(1.05);
   }
 
-  @media (min-width: 420px) and (max-width: 900px) {
+  @media (min-width: 400px) and (max-width: 900px) {
     width: 150px;
     font-size: 14px;
   }
@@ -384,8 +402,26 @@ export const ButtonC = styled.button`
     transform: scale(1.05);
   }
 
-  @media (min-width: 420px) and (max-width: 900px) {
+  @media (min-width: 400px) and (max-width: 900px) {
     width: 160px;
     font-size: 14px;
+  }
+`;
+
+export const DivMenu = styled(motion.div)`
+  position: absolute;
+  background: #222222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  gap: 10px;
+  display: none;
+
+  @media (max-width: 599px) {
+    display: flex;
   }
 `;

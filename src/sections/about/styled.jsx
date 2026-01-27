@@ -88,7 +88,7 @@ export const DivContent = styled(motion.div)`
   flex-direction: column;
   width: 60%;
   height: auto;
-  min-height: 930px;
+  min-height: 1000px;
   margin: 0 auto;
   line-height: 2;
   text-align: center;
