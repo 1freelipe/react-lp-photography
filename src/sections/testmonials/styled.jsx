@@ -20,6 +20,10 @@ export const Title = styled(motion.h2)`
   font-size: 50px;
   text-align: center;
   text-transform: uppercase;
+
+  @media (max-width: 560px) {
+    font-size: 37px;
+  }
 `;
 
 export const Information = styled(motion.p)`
@@ -27,6 +31,10 @@ export const Information = styled(motion.p)`
   font-weight: 200;
   font-style: italic;
   color: #fffff0;
+
+  @media (min-width: 400px) and (max-width: 560px) {
+    text-align: center;
+  }
 `;
 
 export const DivContent = styled.section`
@@ -50,6 +58,10 @@ export const DivContent = styled.section`
     position: absolute;
     bottom: 150px;
     left: 20px;
+
+    @media (min-width: 770px) and (max-width: 1250px) {
+      display: none;
+    }
   }
 `;
 
@@ -74,6 +86,10 @@ export const CardTest = styled.div`
   &:hover {
     transform: translateY(-20px);
     box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.6);
+  }
+
+  @media (max-width: 820px) {
+    height: auto;
   }
 `;
 
