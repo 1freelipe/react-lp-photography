@@ -282,7 +282,7 @@ export const DivImage = styled(motion.div)`
   @media (min-width: 360px) and (max-width: 400px) {
     img {
       position: absolute;
-      top: 13%;
+      top: 8%;
       right: -67%;
       width: 120%;
     }
