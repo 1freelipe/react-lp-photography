@@ -87,7 +87,12 @@ export default function Header() {
 
         <header.IconsWrapper>
           <header.Link $noUnderline>
-            <FaWhatsapp className="wpp" />
+            <header.Linkwpp
+              href="https://api.whatsapp.com/send?phone=11932448313&text=Olá,%20Lucas!%20Quero%20saber%20sobre%20seus%20pacotes%20de%20fotógrafia."
+              target="_blank"
+            >
+              <FaWhatsapp className="wpp" />
+            </header.Linkwpp>
           </header.Link>
           <header.Link $noUnderline>
             <FaInstagram className="instagram" />
