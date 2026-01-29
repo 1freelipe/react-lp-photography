@@ -444,3 +444,17 @@ export const DivMenu = styled(motion.div)`
     display: flex;
   }
 `;
+
+export const Linkwpp = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  color: #fffff0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+`;

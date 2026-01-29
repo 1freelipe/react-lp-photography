@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
 
 import * as contact from './styled';
@@ -29,6 +29,34 @@ const itemVariants = {
 };
 
 export default function Contact({ id }) {
+  const [loading, setLoading] = useState(false);
+
+  const handleForm = (e) => {
+    e.preventDefault();
+    if (loading) return;
+
+    setLoading(true);
+
+    const formData = new FormData(e.target);
+    const nome = formData.get('nome');
+    const sobrenome = formData.get('sobrenome');
+    const servico = formData.get('servico');
+    const faq = formData.get('duvidas');
+
+    const msg = `Olá, Lucas! meu nome é ${nome} ${sobrenome}, gostaria de saber mais sobre o pacote de ${servico}. ${faq}`;
+    const url = `https://api.whatsapp.com/send?phone=19999458014&text=${encodeURIComponent(msg)}`;
+
+    const opened = window.open(url, '_blank');
+
+    if (opened) {
+      e.target.reset();
+    }
+
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  };
+
   return (
     <ParticlesBlack>
       <contact.DivTitle
@@ -68,6 +96,7 @@ export default function Contact({ id }) {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
+            onSubmit={handleForm}
           >
             <contact.Title className="secondTitle" variants={itemVariants}>
               Suas Informações
@@ -76,30 +105,38 @@ export default function Contact({ id }) {
               <contact.NameInput
                 type="text"
                 placeholder="Digite seu nome"
+                name="nome"
                 variants={itemVariants}
+                className="nome"
               />
               <contact.LastName
                 type="text"
                 placeholder="Sobrenome"
                 variants={itemVariants}
+                name="sobrenome"
               />
             </contact.NameLastName>
             <contact.Service
               type="text"
               placeholder="Serviço desejado"
               variants={itemVariants}
+              name="servico"
             />
             <contact.Faq
+              as="textarea"
               placeholder="Dúvidas correlatas"
               variants={itemVariants}
+              name="duvidas"
             />
 
             <contact.Button
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               variants={itemVariants}
+              type="submit"
+              disabled={loading}
             >
-              Enviar Mensagem
+              {loading ? 'Carregando...' : 'Enviar mensagem'}
             </contact.Button>
           </contact.Form>
         </contact.ContactContainer>

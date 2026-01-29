@@ -123,7 +123,14 @@ export default function Header() {
             <header.ButtonP onClick={() => handleScrollTo('pricing')}>
               Conheça mais
             </header.ButtonP>
-            <header.ButtonC>Entre em Contato</header.ButtonC>
+            <header.ButtonC>
+              <header.Linkwpp
+                href="https://api.whatsapp.com/send?phone=11932448313&text=Olá,%20Lucas!%20Quero%20saber%20sobre%20seus%20pacotes%20de%20fotógrafia."
+                target="_blank"
+              >
+                Entre em Contato
+              </header.Linkwpp>
+            </header.ButtonC>
           </header.ButtonWrapper>
         </header.DivContent>
         <header.DivImage

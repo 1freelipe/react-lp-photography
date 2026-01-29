@@ -267,6 +267,23 @@ export const Service = styled(motion.input)`
   }
 `;
 
+export const Email = styled(motion.input)`
+  width: 100%;
+  border: none;
+  padding: 10px;
+  border: 2px solid #c3c6d1;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  border-radius: 9px;
+  font-size: 20px;
+  outline: none;
+
+  &:focus {
+    border-color: rgba(0, 0, 0, 0.6);
+  }
+`;
+
 export const Faq = styled(motion.textarea)`
   width: 100%;
   height: 200px;
